@@ -1,6 +1,6 @@
 def splicer(kmers):
-    # this function tkes the list of k-mers and then splits them on (k-1)-mers
-    # also it creates key_value and value_key databses that will help working
+    # this function takes the list of k-mers and then splits them on (k-1)-mers
+    # also it creates key_value and value_key databases that will help working
     # with a graph
     key_value = {}
     value_key = {}
@@ -17,7 +17,7 @@ def splicer(kmers):
 def construct_de_bruijn_graph(kmers):
     # this function makes a graph using the databases from previous function
     # it also makes some constants that will be essiential in finding
-    # eurelian path
+    # eulerian path
     edges_to_do = 0
     key_value, value_key = splicer(kmers)
     adj_list = [[] for i in range(len(key_value))]
@@ -39,7 +39,7 @@ def construct_de_bruijn_graph(kmers):
         elif vertex_balancing[i] == -1:
             ending_balancing_vertex = i
     # and here we look whether we have we have to add a path or no
-    # based on that we can say if there is an eurelian cycle
+    # based on that we can say if there is an eulerian cycle
     if_cercular = True
     if starting_balancing_vertex != -1 and ending_balancing_vertex != -1:
         adj_list[starting_balancing_vertex].append(ending_balancing_vertex)
@@ -69,9 +69,9 @@ def able_to_move(vertex_start, vertex_end, adj_list, visited):
     return adj_list_end_count > visited_end_count
 
 
-def find_eurelian_path(kmers):
+def find_eulerian_path(kmers):
     # this is the main function that takes the variables from
-    # construct_de_bruijn_graph and finds the eurelian path in a graph
+    # construct_de_bruijn_graph and finds the eulerian path in a graph
     adj_list, key_value, edges_to_do, real_path_begining, if_cercular = \
         construct_de_bruijn_graph(kmers)
     visited_list = []
@@ -118,8 +118,8 @@ def find_eurelian_path(kmers):
 
 def reconstruct_string(k, d, kmers):
     # makes a string out of ordered (k-1)-mers, called real_vertex_path in the
-    # find_eurelian_path function
-    path_of_reconstruction = find_eurelian_path(kmers)
+    # find_eulerian_path function
+    path_of_reconstruction = find_eulerian_path(kmers)
     # due to the fact that we have now 2 strings i've decided to make 2 of
     # them and then cut one and join them
     reconstructed_string_begining = path_of_reconstruction[0][0]
