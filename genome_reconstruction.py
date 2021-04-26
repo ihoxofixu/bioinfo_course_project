@@ -1,9 +1,5 @@
-from string_reconstruction import reconstruct_string
+from string_reconstruction import fasta_input, reconstruct_string
 
 
-list_of_kmers = []
-tmp = input()
-while tmp != '':
-    list_of_kmers.append(tmp)
-    tmp = input()
+list_of_kmers = fasta_input()
 print(reconstruct_string(list_of_kmers))

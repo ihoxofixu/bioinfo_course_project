@@ -1,3 +1,23 @@
+def fasta_input():
+    # this is a special function to transform input from fasta format to list
+    # of k-mers
+    list_of_kmers = []
+    tmp_input = input()
+    tmp_string = ''
+    while tmp_input != '':
+        if tmp_input[0] == '>':
+            if tmp_string != '':
+                list_of_kmers.append(tmp_string)
+                tmp_string = ''
+        else:
+            tmp_string += tmp_input
+        tmp_input = input()
+    if tmp_string != '':
+        list_of_kmers.append(tmp_string)
+        tmp_string = ''
+    return list_of_kmers
+
+
 def splicer(kmers):
     # this function takes the list of k-mers and then splits them on (k-1)-mers
     # also it creates key_value and value_key databases that will help working
@@ -122,5 +142,9 @@ def reconstruct_string(kmers):
     path_of_reconstruction = find_eulerian_path(kmers)
     reconstructed_string = path_of_reconstruction[0]
     for i in range(1, len(path_of_reconstruction)):
+        # print is needed to print the reconstruction alignment, but it works
+        # well even without it
+        print((i-1) * ' ' +
+              path_of_reconstruction[i-1] + path_of_reconstruction[i][-1])
         reconstructed_string += path_of_reconstruction[i][-1]
     return reconstructed_string
