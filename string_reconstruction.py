@@ -1,20 +1,18 @@
-def fasta_input():
+def fasta_input(input_strings):
     # this is a special function to transform input from fasta format to list
     # of k-mers
     list_of_kmers = []
-    tmp_input = input()
-    tmp_string = ''
-    while tmp_input != '':
-        if tmp_input[0] == '>':
-            if tmp_string != '':
-                list_of_kmers.append(tmp_string)
-                tmp_string = ''
+    for input_string in input_strings:
+        if len(input_string) == 0:
+            continue
+        elif input_string[0] == ';':
+            continue
+        elif input_string[0] == '>':
+            list_of_kmers.append('')
         else:
-            tmp_string += tmp_input
-        tmp_input = input()
-    if tmp_string != '':
-        list_of_kmers.append(tmp_string)
-        tmp_string = ''
+            for symbol in input_string:
+                if symbol.upper() >= 'A' and symbol.upper() <= 'Z':
+                    list_of_kmers[-1] += symbol.upper()
     return list_of_kmers
 
 
