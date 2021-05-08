@@ -1,4 +1,4 @@
-def fasta_input(input_strings):
+def clear_fasta_input(input_strings):
     # this is a special function to transform input from fasta format to list
     # of k-mers
     list_of_kmers = []
@@ -139,10 +139,9 @@ def reconstruct_string(kmers):
     # find_eulerian_path function
     path_of_reconstruction = find_eulerian_path(kmers)
     reconstructed_string = path_of_reconstruction[0]
+    order_in_path = []
     for i in range(1, len(path_of_reconstruction)):
-        # print is needed to print the reconstruction alignment, but it works
-        # well even without it
-        print((i-1) * ' ' +
-              path_of_reconstruction[i-1] + path_of_reconstruction[i][-1])
+        order_in_path.append(path_of_reconstruction[i-1]
+                             + path_of_reconstruction[i][-1])
         reconstructed_string += path_of_reconstruction[i][-1]
-    return reconstructed_string
+    return order_in_path, reconstructed_string

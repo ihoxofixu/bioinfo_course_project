@@ -1,7 +1,73 @@
-This repository contains my project dedicated to the assembling genome topic
+# The genome assembling project
+This repository contains my project dedicated to the genome assembling problem.
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Input format](#input-format)
+## General info
+This project is a string assembling algorithm, based on the Eulerian graphs, applied to the genome assembling problem.  
+The [string_reconstruction.py](https://github.com/ihoxofixu/bioinfo_course_project/blob/name_main_test/string_reconstruction.py) contains only functions and can be regarded as a library.  
+The [genome_reconstruction.py](https://github.com/ihoxofixu/bioinfo_course_project/blob/name_main_test/genome_reconstruction.py) is the main file that does all the data and then process it, using string_reconstruction.py.
+## Technologies
+Project is created with:
+* Python version: 3.9.
+## Setup
+To run this project, first of all, download it locally.
+Then, if you want to input all the data from file, you should run it using cmd:
 
-There are 2 types of files in this repository
-1) string_reconstruction files contain only functions and can be regarded as modules
-2) genome_reconstruction files use string_reconstruction to reconstruct a string out of the list of k-mers and then give the genome back
+```
+$ cd ../bioinfo_course_project
+$ python genome_reconstruction.py FILENAME.txt
+```
+Make sure, that your file is in the same folder as genome_reconstruction.py and string_reconstruction.py;  
+Otherwise, if you want to input data from your keyboard, you should run it a bit another way:
 
-Also I have added a solution to a more practical problem of assembling genome from read-pairs
+```
+$ cd ../bioinfo_course_project
+$ python genome_reconstruction.py STDIN
+```
+Or you can just run it in your interpreter.
+## Input format
+The program takes a collection of DNA strings in FASTA format.
+Example of FASTA format:
+
+```
+>example_1
+TAACCCATAGGACCCCCGCATGCCCCTAAGTAGGTACCGGAGATAACACTAGACCCGTAA
+GATGTTCGGCCCGCGATTCTGGAGGATGGCTCATAGCATATCTAGCAGCCATACTTTGTA
+AATCAACCTACTCAGTGTCTCAGACTGAGGATCTACCATATGATAACATCGTATGGTGAC
+CTCGAGATGCGAACGTCTACCCCAGATGAAGGGCACGCTAGCAAAATCAACAAATCTCTT
+GCCGACCACCGAGTCTGAAGGGTGCCATAACCCCGGGGGTCCGCCTGAGGGACCCAGTAT
+ACACGCGTTGAAAAAATAACGTTTCCTTGTATTTTCAAGAAAGGCGCTGTCCATCTCGAT
+GATCCACTTTTGCACCCTTGTGATGAGCCAGGAACAGCAAAGCTGTTTTATATGCCAAGA
+GCCTACAAGTTCATGCTTGTTCTACTATGGGTTCGATACCTTAGCTACAAGTACTTAGTC
+CCTGTAACGGACGGTTAACGACTACGCAGTTATCTCGGAGCTTGCGTCTAATAATCTTTT
+ATTGCCAGAAAAGTCGTTAGGTCAACGCTTCCGTGGTTGATTGCCTCGTAATAGGGAATG
+ATTTCGCATCGACCTGTCTTGTGCTAATACCAGAAGTCGTGTTGATAATAACGACAACCT
+CCTGCCCAGACTTTTGGATGTACTCCTATCTGATCCTATAAGATGATGAAATTGACGCTG
+GCCTAAAGACTGGCAATCGTATACAACTGTCTCTGGCTGGTAAACGTACATGCCTCTGAG
+TCCGGTTGTCTACACAGACAATGACTTCCGCGTACCCCATCTAACGATTCACGCCGCTGG
+GTACTGGAATTTTCGTTTGACCTACCCCACTAGAGGCTACTGGCTGCGGATACGTTGAGG
+AGGTAATAAGGTGGTTGTCCTATTCTTCTTGGCATTAGCAGCGACACCCCGATCACGAAT
+GCGTAGAGACTTGAAACAATGTCCCGTGTTAGCACCCCGG
+>example_2
+AAGGAAGGAGACATTACCCAAGCTACCGCTAACGGCGTAGCGGGTAGCTTCCGAGTTGTG
+CAATTATGGTCCTACAAAACAGAGGGCGTCAGGTTAAACCGTGCAGGTCCCGCCTCATTT
+TACTAGAGCATCTTTTCCATACTCAATCCGCAATGTAGCGGCTTCAAATCGCTACAAACC
+AAGACTCGCGCCGTTGCGGTGTTATCATAGTGTTGAAACAGCCGGTGTTGGAATACAGAA
+TATTAAATCCTTAACCCCACACGTCAGCGTCCGCACTGGACGAGCAATTTACCTAAGAGC
+GTACCGACACATCTCGCGTTACCCGCCCTCCGGACGTGGAAAACTTCTCGTCAGATCTCA
+TAAGAGTAGTACCGCGAATTCCCAGTGTTAATTCCCTTAAATCTCTCTCGGCGCTACAAG
+TCTAGGGTTAATGAGCTCCCAGGATGGTGATCTCACGTATGTTGAACCGTTGGTTAGCTA
+TGATTTACGCGTAAGCGAACATGAGTTCCTTGACACTCACGTAGGATAGTACGGGCGTTG
+TTCTAAACGTCGCTGGGTTTGTAGTGGTGCACGTGGCATAGCGACCATTCTTTCGGAACA
+TTCATTGCGACTCCCTAGACACTCCAACAGCAGAACATCAACCCCGCATGCCTAGTTTGA
+TTCCGCCAGGATGGTGCGGAATCTTTTATCCTTTTTCAAGAAAGGCGCTGTCCATCTCGA
+TGAACTGCCAGTGCCTAGCCGATGAACATCGTGGATTAAAGCTATGTCCTGTGTGGTCAG
+GTAAGAACTTAAGCCAGGGCATCCCCGCCCGTTGTAAGTCTGTTTCTCTGTCCACAGGTT
+AGAAGAGGGGCTCTTGTTCCCTATAAAATTAGTGAGGGAATTAGGGCTTCACCCCGCCTC
+CGCTGTACAACAAGAATGCAGGTAGACTGACTAGGTAGAGCCCCACTTTTTTTTCGCACT
+TTATATTCCCCCCTGCTTTTATGCTACCCTGCTCAGTACG
+```
+Also it is required for a solution to exist, or a program will crash.
