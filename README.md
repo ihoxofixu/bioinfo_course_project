@@ -18,16 +18,36 @@ Then, if you want to input all the data from file, you should run it using cmd:
 
 ```
 $ cd ../bioinfo_course_project
-$ python genome_reconstruction.py FILENAME.txt
+$ python genome_reconstruction.py -i=FILENAME.txt
+```
+or
+```
+$ cd ../bioinfo_course_project
+$ python genome_reconstruction.py --input=FILENAME.txt
 ```
 Make sure, that your file is in the same folder as genome_reconstruction.py and string_reconstruction.py;  
 Otherwise, if you want to input data from your keyboard, you should run it a bit another way:
 
 ```
 $ cd ../bioinfo_course_project
-$ python genome_reconstruction.py STDIN
+$ python genome_reconstruction.py -i=STDIN
 ```
-Or you can just run it in your interpreter.
+or
+```
+$ cd ../bioinfo_course_project
+$ python genome_reconstruction.py --input=STDIN
+```
+Or you can just run it in your interpreter.  
+For help use this commands in cmd:
+```
+$ cd ../bioinfo_course_project
+$ python genome_reconstruction.py -h
+```
+or
+```
+$ cd ../bioinfo_course_project
+$ python genome_reconstruction.py --help
+```
 ## Input format
 The program takes a collection of DNA strings in FASTA format.
 Example of FASTA format:

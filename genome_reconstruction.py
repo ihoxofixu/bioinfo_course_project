@@ -6,7 +6,7 @@ import string_reconstruction
 def main():
     args_parser = argparse.ArgumentParser(description='This script dedicated \
                                           to the assembling genome topic.')
-    args_parser.add_argument('--input',
+    args_parser.add_argument('-i', '--input',
                              type=str,
                              default='STDIN',
                              help='Input file name or \'STDIN\'. \
