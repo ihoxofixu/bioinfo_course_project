@@ -8,7 +8,7 @@ This repository contains my project dedicated to the genome assembling problem.
 ## General info
 This project is a string assembling algorithm, based on the Eulerian graphs, applied to the genome assembling problem.  
 The [string_reconstruction.py](https://github.com/ihoxofixu/bioinfo_course_project/blob/main/string_reconstruction.py) contains only functions and can be regarded as a library.  
-The [genome_reconstruction.py](https://github.com/ihoxofixu/bioinfo_course_project/blob/main/genome_reconstruction.py) is the main file that does all the data and then process it, using string_reconstruction.py.
+The [genome_reconstruction.py](https://github.com/ihoxofixu/bioinfo_course_project/blob/main/genome_reconstruction.py) is the main file that takes all the data and then process it, using string_reconstruction.py.
 ## Technologies
 Project is created with:
 * Python version: 3.9.
