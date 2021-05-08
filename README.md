@@ -6,8 +6,8 @@ This repository contains my project dedicated to the genome assembling problem.
 * [Setup](#setup)
 * [Input format](#input-format)
 ## General info
-This project is a string assembling algorithm, based on the Eulerian graphs, applied to the genome assembling problem. \n
-The [string_reconstruction.py](https://github.com/ihoxofixu/bioinfo_course_project/blob/name_main_test/string_reconstruction.py) contains only functions and can be regarded as a library. \n
+This project is a string assembling algorithm, based on the Eulerian graphs, applied to the genome assembling problem.  
+The [string_reconstruction.py](https://github.com/ihoxofixu/bioinfo_course_project/blob/name_main_test/string_reconstruction.py) contains only functions and can be regarded as a library.  
 The [genome_reconstruction.py](https://github.com/ihoxofixu/bioinfo_course_project/blob/name_main_test/genome_reconstruction.py) is the main file that does all the data and then process it, using string_reconstruction.py.
 ## Technologies
 Project is created with:
@@ -20,7 +20,7 @@ Then, if you want to input all the data from file, you should run it using cmd:
 $ cd ../bioinfo_course_project
 $ python genome_reconstruction.py FILENAME.txt
 ```
-Make sure, that your file is in the same folder as genome_reconstruction.py and string_reconstruction.py; \n
+Make sure, that your file is in the same folder as genome_reconstruction.py and string_reconstruction.py;  
 Otherwise, if you want to input data from your keyboard, you should run it a bit another way:
 
 ```
