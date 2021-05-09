@@ -14,39 +14,15 @@ Project is created with:
 * Python version: 3.9.
 ## Setup
 To run this project, first of all, download it locally.
-Then, if you want to input all the data from file, you should run it using cmd:
-
+Then, if you want to input all the data from file, you should run it using command line. It has two arguments - input stream and output stream.
 ```
 $ cd ../bioinfo_course_project
-$ python genome_reconstruction.py -i=FILENAME.txt
+$ python genome_reconstruction.py -i INPUT [-o OUTPUT]
 ```
-or
-```
-$ cd ../bioinfo_course_project
-$ python genome_reconstruction.py --input=FILENAME.txt
-```
-Make sure, that your file is in the same folder as genome_reconstruction.py and string_reconstruction.py;  
-Otherwise, if you want to input data from your keyboard, you should run it a bit another way:
-
-```
-$ cd ../bioinfo_course_project
-$ python genome_reconstruction.py -i=STDIN
-```
-or
-```
-$ cd ../bioinfo_course_project
-$ python genome_reconstruction.py --input=STDIN
-```
-Or you can just run it in your interpreter.  
-For help use this commands in cmd:
+For help use this commands in command line:
 ```
 $ cd ../bioinfo_course_project
 $ python genome_reconstruction.py -h
-```
-or
-```
-$ cd ../bioinfo_course_project
-$ python genome_reconstruction.py --help
 ```
 ## Input format
 The program takes a collection of DNA strings in FASTA format.
