@@ -9,7 +9,7 @@ def main():
                                           genome topic.')
     args_parser.add_argument('-i', '--input', required=True, type=str,
                              help='Input file name or \'STDIN\'. \
-                             Terminate input from STDIN - Ctrl-Z or Ctrl-D')
+                             Terminate input from STDIN - Ctrl-Z')
     args_parser.add_argument('-o', '--output', type=str,
                              default='STDOUT',
                              help='Output file name or \'STDOUT\'. \
