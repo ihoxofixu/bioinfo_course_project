@@ -9,8 +9,8 @@ def main():
     args_parser.add_argument('-i', '--input',
                              type=str,
                              default='STDIN',
-                             help='Input file name or \'STDIN\'. \
-                             (Default STDIN) \
+                             help='Input file name or \'STDIN\' \
+                             (Default STDIN). \
                              Terminate input from STDIN - Ctrl-Z or Ctrl-D')
     args = args_parser.parse_args()
     if args.input == 'STDIN':
