@@ -1,4 +1,4 @@
-# The genome assembling project
+# Genome assembling project
 This repository contains my project dedicated to the genome assembling problem.
 ## Table of contents
 * [General info](#general-info)
