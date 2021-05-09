@@ -1,0 +1,12 @@
+>test_kmer_1
+CTTA
+>test_kmer_2
+ACCA
+>test_kmer_3
+TACC
+>test_kmer_4
+GGCT
+>test_kmer_5
+GCTT
+>test_kmer_6
+TTAC
