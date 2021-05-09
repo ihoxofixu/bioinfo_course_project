@@ -52,10 +52,12 @@ def construct_de_bruijn_graph(kmers):
     starting_balancing_vertex = -1
     ending_balancing_vertex = -1
     for i in range(len(vertex_balancing)):
-        if vertex_balancing[i] == 1:
+        if vertex_balancing[i] == 1 and starting_balancing_vertex == -1:
             starting_balancing_vertex = i
-        elif vertex_balancing[i] == -1:
+        elif vertex_balancing[i] == -1 and ending_balancing_vertex == -1:
             ending_balancing_vertex = i
+        elif vertex_balancing[i] != 0:
+            raise Exception
     # and here we look whether we have we have to add a path or no
     # based on that we can say if there is an eulerian cycle
     if_cercular = True

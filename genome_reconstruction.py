@@ -23,11 +23,15 @@ def main():
             return
     input_strings = input_stream.readlines()
     list_of_kmers = string_reconstruction.clear_fasta_input(input_strings)
-    kmers_alligning, reconstructed_string = \
-        string_reconstruction.reconstruct_string(list_of_kmers)
-    for i in range(len(kmers_alligning)):
-        print(i*' ' + kmers_alligning[i])
-    print(reconstructed_string)
+    try:
+        kmers_alligning, reconstructed_string = \
+            string_reconstruction.reconstruct_string(list_of_kmers)
+        for i in range(len(kmers_alligning)):
+            print(i*' ' + kmers_alligning[i])
+        print(reconstructed_string)
+    except Exception:
+        print('There is no way, to reconstruct the DNA from these k-mers, \
+try another data.')
 
 
 if __name__ == '__main__':
