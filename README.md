@@ -16,12 +16,12 @@ Project is created with:
 To run this project, first of all, download it locally.
 Then, if you want to input all the data from file, you should run it using command line. It has two arguments - input stream and output stream.
 ```
-$ cd ../bioinfo_course_project
+$ cd *your path*/bioinfo_course_project
 $ python genome_reconstruction.py -i INPUT [-o OUTPUT]
 ```
 For help use this commands in command line:
 ```
-$ cd ../bioinfo_course_project
+$ cd *your path*/bioinfo_course_project
 $ python genome_reconstruction.py -h
 ```
 ## Input format
