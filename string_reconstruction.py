@@ -60,13 +60,13 @@ def construct_de_bruijn_graph(kmers):
             raise Exception
     # and here we look whether we have we have to add a path or no
     # based on that we can say if there is an eulerian cycle
-    if_cercular = True
+    if_circular = True
     if starting_balancing_vertex != -1 and ending_balancing_vertex != -1:
         adj_list[starting_balancing_vertex].append(ending_balancing_vertex)
         edges_to_do += 1
-        if_cercular = False
+        if_circular = False
     return adj_list, key_value, edges_to_do, ending_balancing_vertex,  \
-        if_cercular
+        if_circular
 
 
 def all_vertex_edges_done(vertex_id, adj_list, visited):
@@ -92,7 +92,7 @@ def able_to_move(vertex_start, vertex_end, adj_list, visited):
 def find_eulerian_path(kmers):
     # this is the main function that takes the variables from
     # construct_de_bruijn_graph and finds the eulerian path in a graph
-    adj_list, key_value, edges_to_do, real_path_begining, if_cercular = \
+    adj_list, key_value, edges_to_do, real_path_begining, if_circular = \
         construct_de_bruijn_graph(kmers)
     visited_list = []
     for i in range(len(adj_list)):
@@ -124,7 +124,7 @@ def find_eulerian_path(kmers):
     # because there is an edge between path[0] and path[-1] (if the grapth is
     # nerly-balanced than it will be that edge that we have added and there is
     # no real edge actually)
-    if if_cercular:
+    if if_circular:
         path.append(path[0])
     else:
         for i in range(edges_done):
